@@ -1,7 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>kwkm.github.io</title>
+<meta name="author" content="Takehiro Kawakami">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/ripples.css" rel="stylesheet">
+<link href="css/material.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ripples.min.js"></script>
+<script src="js/material.min.js"></script>
+    <!-- Page style -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header-panel {
+        background-color: #795548;
+        height: 244px;
+        position: relative;
+        z-index: 3;
+      }
+      .header-panel div {
+        position: relative;
+        height: 100%;
+      }
+      .header-panel h1 {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        bottom: 20px;
+        padding-left: 35px;
+      }
+      .header-panel p {
+        color: #D7CCC8;
+        font-size: 10px;
+        font-weight: 400;
+        position: absolute;
+        bottom: 2px;
+        padding-left: 35px;
+      }
+      .menu {
+        overflow: auto;
+        padding: 0;
+      }
+      .menu, .menu * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .menu ul {
+        padding: 0;
+        margin: 7px 0;
+      }
+      .menu ul li {
+        list-style: none;
+        padding: 20px 0 20px 50px;
+        font-size: 15px;
+        font-weight: normal;
+        cursor: pointer;
+      }
+      .menu ul li.active {
+        background-color: #dedede;
+        position: relative;
+      }
+      .menu ul li a {
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+      }
+
+      .pages {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 4;
+        padding: 0;
+        overflow: auto;
+      }
+      .pages > div {
+        padding: 0 5px;
+        padding-top: 164px;
+      }
+
+      .pages .header {
+        color: #5D4037;
+        font-size: 24px;
+        font-weight: normal;
+        margin-top: 5px;
+        margin-bottom: 60px;
+        letter-spacing: 1.20000004768372px;
+      }
+
+      .page {
+        transform: translateY(1080px);
+        transition: transform 0 linear;
+        display: none;
+        opacity: 0;
+        font-size: 16px;
+      }
+
+      .page.active {
+        transform: translateY(0px);
+        transition: all 0.3s ease-out;
+        display: block;
+        opacity: 1;
+      }
+
+</style>
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <div class="header-panel shadow-z-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <h1>kwkm's github</h1>
+            <p>Return to the simple style.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid main">
+      <div class="row">
+        <nav class="col-xs-3 menu">
+        </nav>
+        
+        <div class="pages col-xs-9">
+          <div class="col-xs-10">
+            <div class="well page active" id="about">
+              <h1 class="header">memo</h1>
+              <p></p>
+            </div>
+         </div>
+      </div>
+    </div>      
+  </body>
 </html>
