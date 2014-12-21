@@ -92,6 +92,22 @@
         margin-bottom: 60px;
         letter-spacing: 1.20000004768372px;
       }
+      
+      .pages h2 {
+      	 font-size: 20px;
+      }
+      
+      .pages h3 {
+      	 font-size:18px;
+      }
+      
+      .pages dt {
+      	 color:#727272;
+      }
+      .pages dd {
+      	 color:#B6B6B6;
+      }
+      
 
       .page {
         transform: translateY(1080px);
@@ -131,7 +147,61 @@
           <div class="col-xs-10">
             <div class="well page active" id="about">
               <h1 class="header">memo</h1>
-              <p></p>
+              <h2>メソッドの動詞の使い分け</h2>
+              <p>自分のための使い分けルール</p>
+
+              <h3>生成系</h3>
+              <dl>
+                <dt>add</dt>
+                <dd>登録する。</dd>
+                <dt>insert</dt>
+                <dd>SQLのinsert文を発行する用途。</dd>
+                <dt>register</dt>
+                <dd>オブジェクトに対して、振る舞いを変えるようなデータを登録する際に使用する。（出力時のフィルターを追加したり、ルーティングのルールを追加したり等）</dd>
+                <dt>set</dt>
+                <dd>プロパティに対して値を与える。</dd>
+                <dt>create</dt>
+                <dd>オブジェクトを生成して返す。</dd>
+              </dl>
+
+              <h3>更新系</h3>
+              <dl>
+                <dt>edit</dt>
+                <dd>編集する。</dd>
+                <dt>update</dt>
+                <dd>SQLのupdate文を発行する用途。</dd>
+                <dt>enable</dt>
+                <dd>オブジェクトに対して、特定の振る舞いを有効化する。</dd>
+                <dt>disable</dt>
+                <dd>オブジェクトに対して、特定の振る舞いを無効化する。</dd>
+              </dl>
+
+              <h3>削除系</h3>
+              <dl>
+                <dt>remove</dt>
+                <dd>削除する。</dd>
+                <dt>delete</dt>
+                <dd>SQLのdelete文を発行する用途。</dd>
+                <dt>clear</dt>
+                <dd>中身を空にする。</dd>
+                <dt>initialize</dt>
+                <dd>初期状態に戻す。</dd>
+                <dt>unregister</dt>
+                <dd>登録の解除</dd>
+              </dl>
+
+              <h3>検索系</h3>
+              <dl>
+                <dt>find</dt>
+                <dd>条件に一致した結果を取得する。</dd>
+                <dt>filter</dt>
+                <dd>条件によって除外された結果を取得する。</dd>
+                <dt>search</dt>
+                <dd>条件に一致するものを探す。</dd>
+                <dt>select</dt>
+                <dd>SQLのselect文を発行する用途。</dd>
+              </dl>
+
             </div>
          </div>
       </div>
